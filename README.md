@@ -1,100 +1,142 @@
-# Demo Portal - Data Visualization Dashboard
+# Django Data Visualization Portal
 
-A comprehensive Django-based dashboard showcasing various data visualization libraries and reporting tools. This project demonstrates full-stack development skills, integrating Python backend data processing with modern frontend visualization technologies.
+A Django-based analytics and visualization application demonstrating how Python, data processing and modern JavaScript visualization libraries can be combined to build interactive dashboards and geospatial analysis tools.
+
+The project brings together backend development, data integration, interactive visualization and reporting in a single web application.
 
 ## Screenshots
 
-![Dashboard Overview](screenshots/dashboard.png)
-*Interactive Dashboard with PyGWalker*
+### Interactive Analytics Dashboard
+![Analytics Dashboard](screenshots/dashboard.png)
 
+### Geospatial Network Analysis
 ![Geospatial Analysis](screenshots/map.png)
-*Geospatial Analysis with Kepler.gl*
 
-## Features
+## Key Features
 
-*   **Interactive Dashboards**:
-    *   **Plotly**: Interactive charts and tables.
-    *   **Bokeh**: Python-based interactive visualizations.
-    *   **PyGWalker**: Tableau-like drag-and-drop data exploration.
-    *   **Apache ECharts**: High-performance, modern JavaScript charts.
-    *   **PyDeck**: High-scale spatial rendering for large datasets.
-    *   **Chart.js**: Simple and flexible JavaScript charting.
-    *   **D3.js**: Custom, low-level data visualizations.
-    *   **Stock Live**: Real-time data simulation using Plotly.js.
+### 1. Interactive Data Analytics
+- Interactive charts and tables using Plotly and Bokeh.
+- Exploratory data analysis using Pandas and PyGWalker.
+- JavaScript-based charting examples.
+- Sorting and filtering of analytical data.
 
-*   **Geospatial Visualization**:
-    *   **Kepler.gl**: High-performance geospatial analysis (using OpenStreetMap tiles).
-    *   **PyDeck**: WebGL-powered visualization for large-scale datasets.
-    *   **Leaflet**: Mobile-friendly interactive maps.
-    *   **OpenLayers**: Open-source vector map rendering.
-    *   **MapLibre**: Open-source vector map rendering.
+### 2. Geospatial Visualization
+- Interactive spatial visualizations using Kepler.gl and PyDeck.
+- Map-based analysis using Leaflet and MapLibre.
+- Spatial data processing using GeoPandas.
+- Examples of working with large geospatial datasets.
 
-*   **Reporting & Export**:
-    *   **PDF Generation**: Examples using WeasyPrint, Matplotlib, and jsPDF.
-    *   **Data Tables**: Interactive tables with sorting and filtering.
+### 3. Reporting and Export
+- PDF report generation examples.
+- Chart and data export workflows.
+- Interactive analytical tables.
 
-*   **Backend**:
-    *   Built with **Django**.
-    *   Data processing with **Pandas** and **NumPy**.
+### 4. Backend Application
+- Django-based application structure.
+- Python data processing using Pandas and NumPy.
+- Environment-based application configuration.
+- Django URL routing, views and templates.
 
-## Tech Stack
+## Technology Stack
 
-*   **Backend**: Python, Django, Pandas, NumPy
-*   **Frontend**: HTML5, CSS3 (Bootstrap 5, AdminLTE), JavaScript
-*   **Visualization Libraries**: Plotly, Bokeh, PyGWalker, Kepler.gl, PyDeck, OpenLayers, ECharts, Chart.js, D3.js, Leaflet, MapLibre GL JS
+| Area | Technologies |
+|---|---|
+| Backend | Python, Django |
+| Data Processing | Pandas, NumPy |
+| Frontend | JavaScript, HTML5, CSS3, Bootstrap 5 |
+| Visualization | Plotly, Bokeh, PyGWalker, Chart.js |
+| Geospatial | GeoPandas, Kepler.gl, PyDeck, Leaflet, MapLibre |
+| Reporting | WeasyPrint, Matplotlib, jsPDF |
+| Database | SQLite (default development configuration) |
 
-## Prerequisites
+## Project Structure
 
-*   **Python**: Tested up to Python 3.12. (Note: Python 3.13 is currently not supported due to dependency compatibility issues).
+```text
+django-data-visualization-portal/
+│
+├── app_inputs/          # Application input files
+├── dashboard/           # Django dashboard application
+├── demo_portal/         # Django project configuration
+├── screenshots/         # Application screenshots
+├── static/              # CSS, JavaScript and static assets
+├── templates/           # Django templates
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+```
 
-## Installation
+## Getting Started
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/kmaddala85/demo_portal.git
-    cd demo_portal
-    ```
+### Prerequisites
+- Python 3.12 (tested configuration)
+- Git
 
-2.  **Create and activate a virtual environment** (optional but recommended):
-    ```bash
-    python -m venv venv
-    # Windows
-    venv\Scripts\activate
-    # macOS/Linux
-    source venv/bin/activate
-    ```
+### 1. Clone the repository
 
-3.  **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+git clone https://github.com/kmaddala85/django-data-visualization-portal.git
+cd django-data-visualization-portal
+```
 
-4.  **Set up environment variables**:
-    *   Create a `.env` file in the root directory.
-    *   Add your secret key and debug setting:
-        ```env
-        SECRET_KEY=your-secret-key-here
-        DEBUG=True
-        ```
+### 2. Create a virtual environment
 
-5.  **Run migrations**:
-    ```bash
-    python manage.py migrate
-    ```
+```bash
+python -m venv .venv
+```
 
-6.  **Run the development server**:
-    ```bash
-    python manage.py runserver
-    ```
+Windows PowerShell:
 
-7.  **Access the portal**:
-    Open your browser and go to `http://127.0.0.1:8000/`.
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Linux / macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file in the project root using `.env.example` as a template.
+
+Do not commit your actual `.env` file.
+
+### 5. Apply migrations
+
+```bash
+python manage.py migrate
+```
+
+### 6. Start the development server
+
+```bash
+python manage.py runserver
+```
+
+Open:
+
+http://127.0.0.1:8000/
+
+## Configuration and Data
+
+The repository uses SQLite as its default development database.
+
+Use synthetic or sanitized sample datasets when demonstrating the application. Do not commit company data, customer information, network configurations or credentials.
+
+## Project Scope
+
+This repository is a portfolio and demonstration project showcasing Django development, data analytics and visualization techniques.
+
+It is not presented as a production deployment.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-*   [AdminLTE](https://adminlte.io) for the dashboard template.
-*   All the amazing open-source visualization libraries used in this project.
+MIT License.
