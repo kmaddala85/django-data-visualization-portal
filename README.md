@@ -7,7 +7,7 @@ The project brings together backend development, data integration, interactive v
 ## Screenshots
 
 ### Interactive Analytics Dashboard
-![Analytics Dashboard](screenshots/Screenshot dashboard.png)
+![Analytics Dashboard](screenshots/Screenshot_dashboard.png)
 
 ### Geospatial Network Analysis
 ![Geospatial Analysis](screenshots/map.png)
